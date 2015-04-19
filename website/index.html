@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>unquote</title>
+
+	<meta name="viewport"
+    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+	<script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+
+	<link rel="import"
+  		href="../bower_components/font-roboto/roboto.html">
+	<link rel="import"
+  		href="../bower_components/core-header-panel/core-header-panel.html">
+	<link rel="import"
+  		href="../bower_components/core-toolbar/core-toolbar.html">
+	<link rel="import"
+  		href="../bower_components/paper-tabs/paper-tabs.html">
+  	<link rel="import"
+  		href="../bower_components/paper-input/paper-input.html">
+  	<link rel="import"
+  		href="../bower_components/paper-button/paper-button.html">
+	<link rel="import" href="authentication-card.html">
+
+  	<style>
+		html,body {
+			height: 100%;
+			margin: 0;
+			background-color: #E5E5E5;
+			font-family: 'RobotoDraft', sans-serif;
+		}
+		core-header-panel {
+			height: 100%;
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+		core-toolbar {
+  			background: #3333CC;
+  			color: white;
+		}
+		#tabs {
+  			width: 100%;
+  			color:white;
+  			margin: 0;
+  			-webkit-user-select: none;
+  			-moz-user-select: none;
+  			-ms-user-select: none;
+  			user-select: none;
+  			text-transform: uppercase;
+		}
+		.container {
+    		width: 80%;
+    		margin: 50px auto;
+  		}
+  		paper-input {
+      		width: 80%;
+    	}
+   		paper-input-decorator {
+   			color: #3333CC;
+      		max-width: 80%;
+    	}
+    	paper-button.colored {
+    		background: #3333CC;
+      		color: white;
+    	}
+  	</style>
+</head>
+
+<body unresolved>
+	<core-header-panel>
+		<core-toolbar>
+			<paper-tabs id="tabs" selected="Customer" self-end>
+				<paper-tab name="Customer">Customer</paper-tab>
+    			<paper-tab name="Hostess">Hostess</paper-tab>
+    			<paper-tab name="Server">Server</paper-tab>
+    			<paper-tab name="Manager">Manager</paper-tab>
+    		</paper-tabs>
+		</core-toolbar>
+
+		<div class="container" layout vertical center>
+
+			<authentication-card>
+			    <img width="70" height="70"
+			    	src="../images/avatar-07.svg">
+			    <h2>Customer Login</h2>
+			    <paper-input label="Please enter your parties ID here" 
+			    	floatingLabel>
+			    </paper-input>
+			    <paper-button class="colored">
+			    	submit
+			    </paper-button>
+			</authentication-card>
+		</div>
+	</core-header-panel>
+
+	<script>
+		var tabs = document.querySelector('paper-tabs');
+
+		tabs.addEventListener('core-select', function() {
+			console.log("Selected: " + tabs.selected);
+  		});
+	</script>
+</body>
+
+</html>
