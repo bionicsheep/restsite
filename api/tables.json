@@ -1,0 +1,50 @@
+[
+  {
+    "uid": 1,
+    "username" : "Table 1",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 2,
+    "username" : "Table 2",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  },
+    {
+    "uid": 3,
+    "username" : "Table 3",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 4,
+    "username" : "Table 4",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 5,
+    "username" : "Table 5",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 6,
+    "username" : "Table 6",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 7,
+    "username" : "Table 7",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 8,
+    "username" : "Table 8",
+    "avatar" : "../images/table.jpg",
+    "favorite": false
+  }
+]

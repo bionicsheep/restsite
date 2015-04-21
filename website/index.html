@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>unquote</title>
+	<title>Restaurant</title>
 
 	<meta name="viewport"
     content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
@@ -42,7 +42,6 @@
 		#tabs {
   			width: 100%;
   			color:white;
-  			margin: 0;
   			-webkit-user-select: none;
   			-moz-user-select: none;
   			-ms-user-select: none;
@@ -79,15 +78,19 @@
 		</core-toolbar>
 
 		<div class="container" layout vertical center>
-
 			<authentication-card>
 			    <img width="70" height="70"
-			    	src="../images/avatar-07.svg">
-			    <h2>Customer Login</h2>
-			    <paper-input label="Please enter your parties ID here" 
+			    	src="../images/food.jpg">
+			    <h2
+			    id="changeable">Customer Login</h2>
+			    <paper-input
+			    	id="input_field"
+			     	label="Please enter your ID here" 
 			    	floatingLabel>
 			    </paper-input>
-			    <paper-button class="colored">
+			    <paper-button
+			    	id = "submitButton" 
+			    	class="colored">
 			    	submit
 			    </paper-button>
 			</authentication-card>
@@ -98,7 +101,26 @@
 		var tabs = document.querySelector('paper-tabs');
 
 		tabs.addEventListener('core-select', function() {
-			console.log("Selected: " + tabs.selected);
+			if(tabs.selected == "Hostess"){
+				document.getElementById("changeable").innerHTML = "Hostess";
+			}
+			if(tabs.selected == "Customer"){
+				document.getElementById("changeable").innerHTML = "Customer";
+			}
+			if(tabs.selected == "Server"){
+				document.getElementById("changeable").innerHTML = "Server";
+			}
+			if(tabs.selected == "Manager"){
+				document.getElementById("changeable").innerHTML = "Manager";
+			}
+  		});
+	</script>
+
+	<script>
+		var submitButton = document.querySelector('paper-button');
+
+		submitButton.addEventListener('click', function() {
+			window.location.href = "hostess_index.html";;
   		});
 	</script>
 </body>
